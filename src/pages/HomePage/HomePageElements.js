@@ -45,8 +45,9 @@ export const Button = styled.button`
   color: ${secondaryColor};
   margin-left: 24px;
   margin-top: 24px;
-  font-size: 18px;
-  width: 96px;
+  font-size: 24px;
+  padding: 5px;
+  width: 220px;
   height: 2em;
   border: 2px solid ${secondaryColor};
   border-radius: 12px;

@@ -11,22 +11,14 @@ import {
 } from "./HomePageElements";
 
 const HomePage = () => {
-  const [user, setUser] = useState("");
   return (
     <HomeBg>
       <HomeWrapper>
         <HomeH1>How old is your musical taste?</HomeH1>
         <HomeText>Input your Spotify user and find out for yourself.</HomeText>
-        <div>
-          <Input
-            type="text"
-            value={user}
-            onChange={(e) => setUser(e.target.value)}
-          />
-          <a href="http://localhost:5000/login">
-            <Button>Go!</Button>
-          </a>
-        </div>
+        <a href="http://localhost:5000/login">
+          <Button>Login with Spotify</Button>
+        </a>
       </HomeWrapper>
     </HomeBg>
   );
