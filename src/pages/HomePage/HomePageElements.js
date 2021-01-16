@@ -42,6 +42,7 @@ export const Input = styled.input`
 
 export const Button = styled.button`
   background-color: ${mainColor};
+  font-weight: 900;
   color: ${secondaryColor};
   margin-left: 24px;
   margin-top: 24px;

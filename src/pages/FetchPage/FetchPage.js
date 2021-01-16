@@ -33,6 +33,18 @@ const FetchPage = () => {
     0,
     0,
   ]);
+  const ageLabels = [
+    "2020s",
+    "2010s",
+    "2000s",
+    "1990s",
+    "1980s",
+    "1970s",
+    "1960s",
+    "1950s",
+    "1940s",
+    "before 1940s",
+  ];
   const [isLoading, setIsLoading] = useState(true);
   const [isError, setIsError] = useState(false);
 
@@ -137,75 +149,16 @@ const FetchPage = () => {
           {age !== 1 ? "s" : ""} old.
         </FetchH1>
         <ProgressBox>
-          <ProgressBarWrapper>
-            <ProgressLabel>before 1940s</ProgressLabel>
-            <ProgressBar
-              progress={(ageDivision[9] * 100).toFixed(2) + "%"}
-            ></ProgressBar>
-          </ProgressBarWrapper>
-
-          <ProgressBarWrapper>
-            <ProgressLabel>1940s</ProgressLabel>
-            <ProgressBar
-              progress={(ageDivision[8] * 100).toFixed(2) + "%"}
-            ></ProgressBar>
-          </ProgressBarWrapper>
-
-          <ProgressBarWrapper>
-            <ProgressLabel>1950s</ProgressLabel>
-            <ProgressBar
-              progress={(ageDivision[7] * 100).toFixed(2) + "%"}
-            ></ProgressBar>
-          </ProgressBarWrapper>
-
-          <ProgressBarWrapper>
-            <ProgressLabel>1960s</ProgressLabel>
-            <ProgressBar
-              progress={(ageDivision[6] * 100).toFixed(2) + "%"}
-            ></ProgressBar>
-          </ProgressBarWrapper>
-
-          <ProgressBarWrapper>
-            <ProgressLabel>1970s</ProgressLabel>
-            <ProgressBar
-              progress={(ageDivision[5] * 100).toFixed(2) + "%"}
-            ></ProgressBar>
-          </ProgressBarWrapper>
-
-          <ProgressBarWrapper>
-            <ProgressLabel>1980s</ProgressLabel>
-            <ProgressBar
-              progress={(ageDivision[4] * 100).toFixed(2) + "%"}
-            ></ProgressBar>
-          </ProgressBarWrapper>
-
-          <ProgressBarWrapper>
-            <ProgressLabel>1990s</ProgressLabel>
-            <ProgressBar
-              progress={(ageDivision[3] * 100).toFixed(2) + "%"}
-            ></ProgressBar>
-          </ProgressBarWrapper>
-
-          <ProgressBarWrapper>
-            <ProgressLabel>2000s</ProgressLabel>
-            <ProgressBar
-              progress={(ageDivision[2] * 100).toFixed(2) + "%"}
-            ></ProgressBar>
-          </ProgressBarWrapper>
-
-          <ProgressBarWrapper>
-            <ProgressLabel>2010s</ProgressLabel>
-            <ProgressBar
-              progress={(ageDivision[1] * 100).toFixed(2) + "%"}
-            ></ProgressBar>
-          </ProgressBarWrapper>
-
-          <ProgressBarWrapper>
-            <ProgressLabel>2020s</ProgressLabel>
-            <ProgressBar
-              progress={(ageDivision[0] * 100).toFixed(2) + "%"}
-            ></ProgressBar>
-          </ProgressBarWrapper>
+          {ageLabels.map((label, index) => {
+            return (
+              <ProgressBarWrapper>
+                <ProgressLabel>{label}</ProgressLabel>
+                <ProgressBar
+                  progress={(ageDivision[index] * 100).toFixed(2) + "%"}
+                />
+              </ProgressBarWrapper>
+            );
+          })}
         </ProgressBox>
       </FetchWrapper>
     </FetchBg>

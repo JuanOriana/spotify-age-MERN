@@ -4,7 +4,8 @@ const mainColor = "#191414";
 const secondaryColor = "#00D95A";
 
 export const FetchBg = styled.div`
-  background: linear-gradient(#777, ${mainColor} 30%);
+  background: ${({ isLoading }) =>
+    isLoading ? "#191414" : "linear-gradient(#777, #191414 30%);"};
   color: white;
   text-align: center;
   position: relative;

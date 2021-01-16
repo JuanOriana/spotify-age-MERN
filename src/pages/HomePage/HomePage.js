@@ -17,7 +17,7 @@ const HomePage = () => {
         <HomeH1>How old is your musical taste?</HomeH1>
         <HomeText>Log in with your Spotify user and find out!</HomeText>
         <a href="http://localhost:5000/login">
-          <Button>Login with Spotify</Button>
+          <Button>Log in with Spotify</Button>
         </a>
       </HomeWrapper>
     </HomeBg>
