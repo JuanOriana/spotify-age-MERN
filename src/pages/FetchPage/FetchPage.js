@@ -60,12 +60,15 @@ const FetchPage = () => {
     setIsLoading(true);
 
     // Read users top songs (value x2);
-    fetch("	https://api.spotify.com/v1/me/top/tracks?time_range=long_term", {
-      method: "get",
-      headers: new Headers({
-        Authorization: "Bearer  " + access_token,
-      }),
-    })
+    fetch(
+      "	https://api.spotify.com/v1/me/top/tracks?time_range=long_term&limit=50",
+      {
+        method: "get",
+        headers: new Headers({
+          Authorization: "Bearer  " + access_token,
+        }),
+      }
+    )
       .then((data) => data.json())
       .then((json) => {
         json.items.forEach((track) => {
@@ -79,7 +82,7 @@ const FetchPage = () => {
           }
         });
 
-        return fetch("https://api.spotify.com/v1/me/tracks", {
+        return fetch("https://api.spotify.com/v1/me/tracks?limit=50", {
           method: "get",
           headers: new Headers({
             Authorization: "Bearer  " + access_token,
