@@ -45,6 +45,7 @@ const FetchPage = () => {
     const currYear = new Date().getFullYear();
     let ageCount = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
     let percentages = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+    setIsLoading(true);
 
     // Read users top songs (value x2);
     fetch("	https://api.spotify.com/v1/me/top/tracks?time_range=long_term", {

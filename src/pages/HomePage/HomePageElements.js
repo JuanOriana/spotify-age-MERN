@@ -1,14 +1,14 @@
 import styled from "styled-components";
 
-const mainColor = "#2d46b9";
-const secondaryColor = "#1ed760";
+const mainColor = "#191414";
+const secondaryColor = "#00D95A";
 
 export const HomeBg = styled.div`
   background-color: ${mainColor};
   color: ${secondaryColor};
   text-align: center;
   position: relative;
-  height: 100vh;
+  height: 98vh;
 `;
 export const HomeWrapper = styled.div`
   padding-top: 35vh;
@@ -47,10 +47,11 @@ export const Button = styled.button`
   margin-top: 24px;
   font-size: 24px;
   padding: 5px;
-  width: 220px;
+  width: 260px;
   height: 2em;
   border: 2px solid ${secondaryColor};
   border-radius: 12px;
+  cursor: pointer;
 
   &:hover {
     border: none;

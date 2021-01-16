@@ -2,8 +2,8 @@ import React from "react";
 import styled from "styled-components";
 
 const FooterText = styled.p`
-  background-color: darkblue;
-  color: beige;
+  background-color: #030606;
+  color: #999;
   text-align: center;
 `;
 
