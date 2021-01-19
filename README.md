@@ -20,11 +20,13 @@ The following env variables can also be set to your liking but are entirely opti
 Running the web-app is as easy as moving to the main directory and then:
 
 ```
+npm install
 npm start
 ````
 And then on another terminal:
 ````
 cd backend
+npm install
 node server
 ````
 
